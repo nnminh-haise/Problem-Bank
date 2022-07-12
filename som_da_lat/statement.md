@@ -1,8 +1,8 @@
 # Sớm Đà Lạt
 
-Giữa khí trời se lạnh của thành phố Đà Lạt, Haise đang dạo quanh hồ Xuân Hương thì vô tình thấy một hàng đá ở gần mặt hồ. Cậu đếm thì thấy có $n$ viên đá và trên mỗi viên đá có khắc một số nguyên dương. Cậu ngẫu hứng muốn nhảy từ viên đá đầu tiên sang viên đá thứ $n$. Từ viên đá ở vị trí $i$ cậu có thể nhảy sang viên đá ở vị trí $i + 1$ hoặc vị trí $i + 2$. Khi từ viên đá này nhảy sang viên đá khác, cậu tính chênh lệch giá trị được ghi trên hai viên đá và sẽ tính tổng các giá trị đó lại, gọi là $P$.
+Giữa khí trời se lạnh của thành phố Đà Lạt, Tuin đang dạo quanh hồ Xuân Hương thì vô tình thấy một hàng đá ở gần mặt hồ. Cậu đếm thì thấy có $n$ viên đá và trên mỗi viên đá có khắc một số nguyên dương. Cậu ngẫu hứng muốn nhảy từ viên đá đầu tiên sang viên đá thứ $n$. Từ viên đá ở vị trí $i$ cậu có thể nhảy sang viên đá ở vị trí $i + 1$ hoặc vị trí $i + 2$. Khi từ viên đá này nhảy sang viên đá khác, cậu tính chênh lệch giá trị được ghi trên hai viên đá và sẽ tính tổng các giá trị đó lại, gọi là $P$.
 
-***Yêu cầu:*** Hãy giúp Haise tính và đưa ra giá trị $P$ nhỏ nhất có thể khi cậu nhảy từ viên đá thứ nhất đến viên đá thứ $n$.
+***Yêu cầu:*** Hãy giúp Tuin tính và đưa ra giá trị $P$ nhỏ nhất có thể khi cậu nhảy từ viên đá thứ nhất đến viên đá thứ $n$.
 
 ## Input
 
