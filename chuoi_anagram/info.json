@@ -1,0 +1,13 @@
+{
+    "problemName": "chuoi_anagram",
+    "writer": "nnminh",
+    "tags": [
+        "two pointer",
+        "strings",
+        "sorting"
+    ],
+    "difficulty": 0,
+    "originalProblem": "https://leetcode.com/problems/valid-anagram/",
+    "ID": "M43500UX23",
+    "date": "29/07/2022"
+}
