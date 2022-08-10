@@ -11,15 +11,40 @@ const string LOG_FILE = "testcase_log.txt";
 const string PREVIEW_TESTCASES = "testcases.txt";
 const string SETTING_FILE = "setting.jeon";
 const string TESTCASE_ZIP = "testcases.zip";
-const int CURRENT_DATE = 0;
+const int CURRENT_DATE = 10;
 
 void makeInput(int testNumber, ofstream &cout, ofstream &log) {
+    ClosedSet lengthRange(5, 10);
+    if (testNumber > 10)
+        lengthRange = ClosedSet(1000, 10000);
 
+    int n = randInt(lengthRange);
+    int m = randInt(ClosedSet(0, (int)n / 2));
+
+    string s = randStr(n);
+
+    for (int i = 1; i <= m; ++i) {
+        int p = randInt(ClosedSet(0, n - 1));
+        s[p] = ' ';
+    }
+    cout << s << endl;
     return;
 }
 
 void makeOutput(ifstream &cin, ofstream &cout, ofstream &log) {
-    
+    string s;
+    getline(cin, s);
+
+    int index = s.length() - 1;
+    while (index >= 0 and s[index] == ' ') {
+        --index;
+    }
+    int length = index;
+    while (index >= 0 and tolower(s[index]) >= 'a' and tolower(s[index]) <= 'z') {
+        --index;
+    }
+    length -= index;
+    cout << length << endl;
     return;
 }
 
@@ -129,9 +154,10 @@ int main() {
                 break;
             }
         }
-        if (!flag) {
-            removeFile(LOG_FILE);
-        }
+        // FIXME: This feature is curently having a bug where testcases_log.txt can not be removed because it was open in the same working section of terminal.
+        // if (!flag) {
+        //     removeFile(LOG_FILE);
+        // }
 
         //  Remove Compressor.ps1 file!
         removeFile("compressor.ps1");

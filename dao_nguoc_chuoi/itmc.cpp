@@ -11,15 +11,39 @@ const string LOG_FILE = "testcase_log.txt";
 const string PREVIEW_TESTCASES = "testcases.txt";
 const string SETTING_FILE = "setting.jeon";
 const string TESTCASE_ZIP = "testcases.zip";
-const int CURRENT_DATE = 0;
+const int CURRENT_DATE = 10;
 
 void makeInput(int testNumber, ofstream &cout, ofstream &log) {
+    ClosedSet lengthRange(5, 100);
+    if (testNumber > 10)
+        lengthRange = ClosedSet(1000, 100000);
 
+    string s = randStr(randInt(lengthRange));
+    cout << s << endl;
     return;
 }
 
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        for (int i = 0; i < (int)s.size() / 2; ++i)
+            swap(s[i], s[(int)s.size() - 1 - i]);
+    }
+};
+
 void makeOutput(ifstream &cin, ofstream &cout, ofstream &log) {
-    
+    string s;
+	cin >> s;
+	vector <char> f;
+	for (char chr: s)
+		f.push_back(chr);
+
+	Solution sol;
+	sol.reverseString(f);
+
+	for (char chr: f)
+		cout << chr;
+	cout << endl;
     return;
 }
 
@@ -129,9 +153,10 @@ int main() {
                 break;
             }
         }
-        if (!flag) {
-            removeFile(LOG_FILE);
-        }
+        // FIXME: This feature is curently having a bug where testcases_log.txt can not be removed because it was open in the same working section of terminal.
+        // if (!flag) {
+        //     removeFile(LOG_FILE);
+        // }
 
         //  Remove Compressor.ps1 file!
         removeFile("compressor.ps1");
