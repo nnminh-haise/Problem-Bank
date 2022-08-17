@@ -18,8 +18,9 @@ Trên hình chữ nhật có $q$ ô được đánh dấu `x`.
 
 ## Subtasks
 
-- Subtask $1$ ($25\%$ số điểm): có
-- Subtask $2$ ($75\%$ số điểm): không có ràng buộc gì thêm.
+- Subtask $1$ ($50\%$ số điểm): có $1 \le n, m \le 50$.
+- Subtask $2$ ($30\%$ số điểm): có $1 \le n, m \le 500$.
+- Subtask $2$ ($20\%$ số điểm): không có ràng buộc gì thêm.
 
 ## Output
 
