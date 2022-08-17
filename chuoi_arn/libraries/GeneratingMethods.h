@@ -152,7 +152,7 @@ vector <int> randList(int numberOfElements, ClosedSet objectRange, bool contains
         }
     }
 
-    return result = shuffleList(result);
+    return result = result;
 }
 
 /*
@@ -211,7 +211,7 @@ string randStr(int numberOfCharacters, const string templateString = "qwertyuiop
         set <char> chrs;
 
         while (chrs.size() < numberOfCharacters)
-            chrs.insert(templateString[randInt(ClosedSet(0, (int)templateString.length() - 1))]);
+            chrs.insert(templateString[randInt(ClosedSet(0, (int)templateString.length()))]);
 
         for (char chr: chrs)
             result += chr;
